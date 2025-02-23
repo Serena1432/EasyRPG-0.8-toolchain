@@ -132,7 +132,7 @@ ICUDATA_URL=https://ci.easyrpg.org/job/icudata/lastSuccessfulBuild/artifact/icud
 ICUDATA_FILES=icudt*.dat
 
 lib=icudata69
-ICUDATA69_URL=https://ci.easyrpg.org/job/icudata/lastSuccessfulBuild/artifact/icudata69.tar.gz
+ICUDATA69_URL=https://easyrpg.org/downloads/icudata/icudata69.tar.gz
 ICUDATA69_FILES=icudt69*.dat
 
 lib=SDL2
