@@ -50,6 +50,7 @@ function download_liblcf {
 	if [ "$BUILD_LIBLCF" == "1" ]; then
 		git_clone "https://github.com/easyrpg/liblcf"
 		(cd liblcf
+			git checkout 9c09529e3de0a4106470082ef48a00d4c3593c33 # Checkout to liblcf 0.8
 			autoreconf -fi
 		)
 	fi
