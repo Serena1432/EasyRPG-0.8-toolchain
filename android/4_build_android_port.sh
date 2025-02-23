@@ -24,7 +24,7 @@ export ANDROID_HOME=$SDK_ROOT
 
 # EasyRPG Player
 if [ ! -d Player/.git ]; then
-	git clone https://github.com/EasyRPG/Player.git
+	git clone https://github.com/The-Firefly-Project/EasyRPG-0.8-Vietnamese.git
 fi
 
 cd Player/builds/android
