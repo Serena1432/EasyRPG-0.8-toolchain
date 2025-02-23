@@ -92,6 +92,10 @@ download_and_extract $ICU_URL
 rm -f $ICUDATA_FILES
 download_and_extract $ICUDATA_URL
 
+# icudata69
+rm -f $ICUDATA69_FILES
+download_and_extract $ICUDATA69_URL
+
 msg " [3] Downloading platform libraries"
 
 # liblcf

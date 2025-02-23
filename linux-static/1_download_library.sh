@@ -90,6 +90,10 @@ download_and_extract $ICU_URL
 rm -f $ICUDATA_FILES
 download_and_extract $ICUDATA_URL
 
+# icudata69
+rm -f $ICUDATA69_FILES
+download_and_extract $ICUDATA69_URL
+
 # SDL2
 rm -rf $SDL2_DIR
 download_and_extract $SDL2_URL
