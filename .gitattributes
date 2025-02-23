@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# do not convert line ending of patch files
+*.patch -text

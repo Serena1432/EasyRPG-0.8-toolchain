@@ -1,0 +1,21 @@
+# All folders in the buildscript directories
+/*/*/
+
+# Except some Windows folders
+!/windows/icu-easyrpg/
+!/windows/fluidsynth-easyrpg/
+!/windows/helper/
+
+# Except everything in shared
+!/shared/*
+
+.patches-applied
+*.dat
+*.gz
+*.bz2
+*.tgz
+*.zip
+*.xz
+*.pl
+*.cache
+.DS_Store

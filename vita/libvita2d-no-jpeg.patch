@@ -1,0 +1,56 @@
+--- libvita2d-orig/libvita2d/source/vita2d_image_jpeg.c	2022-05-22 15:48:57.167589790 +0200
++++ libvita2d/libvita2d/source/vita2d_image_jpeg.c	2022-05-22 15:49:53.487590494 +0200
+@@ -3,7 +3,7 @@
+ #include <string.h>
+ #include <psp2/io/fcntl.h>
+ #include <psp2/gxm.h>
+-#include <jpeglib.h>
++//#include <jpeglib.h>
+ #include "vita2d.h"
+ 
+ // Following official documentation max width or height of the texture is 4096
+@@ -11,6 +11,7 @@
+ 
+ static vita2d_texture *_vita2d_load_JPEG_generic(struct jpeg_decompress_struct *jinfo, struct jpeg_error_mgr *jerr)
+ {
++#if 0
+ 	unsigned int longer = jinfo->image_width > jinfo->image_height ? jinfo->image_width : jinfo->image_height;
+ 	float downScale = (float)longer / (float)MAX_TEXTURE;
+ 	jinfo->scale_denom = ceil(downScale);
+@@ -47,11 +48,14 @@
+ 	jpeg_finish_decompress(jinfo);
+ 
+ 	return texture;
++#endif
++	return NULL;
+ }
+ 
+ 
+ vita2d_texture *vita2d_load_JPEG_file(const char *filename)
+ {
++#if 0
+ 	FILE *fp;
+ 	if ((fp = fopen(filename, "rb")) <= 0) {
+ 		return NULL;
+@@ -80,11 +84,14 @@
+ 
+ 	fclose(fp);
+ 	return texture;
++#endif
++	return NULL;
+ }
+ 
+ 
+ vita2d_texture *vita2d_load_JPEG_buffer(const void *buffer, unsigned long buffer_size)
+ {
++#if 0
+ 	unsigned int magic = *(unsigned int *)buffer;
+ 	if (magic != 0xE0FFD8FF && magic != 0xE1FFD8FF) {
+ 		return NULL;
+@@ -104,4 +111,6 @@
+ 	jpeg_destroy_decompress(&jinfo);
+ 
+ 	return texture;
++#endif
++	return NULL;
+ }
